@@ -3,5 +3,5 @@ myNewCaffeVersionLearning
 
 ### Cuda 6.5 toolkits
  * Uninstall the current driver
-{{{ fsfsdf }}}
+{ fsfsdf }
 new Version learning
