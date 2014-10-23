@@ -17,6 +17,13 @@ myNewCaffeVersionLearning
    
    export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64:$LD_LIBRARY_PATH
    ```
+   
+4. GPU Test
+   * Go to 
+   ```
+   
+   ```
+5. 
 new Version learning
 <blockquote cite="http://developer.mozilla.org">
   <p>This is a quotation taken from the Mozilla Developer Center.</p>
