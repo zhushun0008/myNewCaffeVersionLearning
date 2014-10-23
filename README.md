@@ -49,3 +49,9 @@ new Version learning
     6. select "X:\serial\license.lic" when asked for license file (where "X" is drive letter amounted under /mnt/* of my Linux)
   </p>
 </blockquote>
+
+### Get trained Models
+* run python script
+    * dependency
+    * pip search yaml
+    *   sudo pip install yaml
