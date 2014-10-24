@@ -165,9 +165,9 @@ When it runs, a lot of information will on the screen
     I0828 22:18:46.171669 11510 solver.cpp:397] Iteration 120, lr = 0.001
     
     [...]
-    
     ```
 If we are eager to check all the information ,just run the command instead of previous one
+
     ```
     caffe-master$ ./build/tools/caffe train -solver models/finetune_flickr_style/solver.prototxt -weights models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel -gpu 0 >&./trainFinetuneNetLog.txt
     
