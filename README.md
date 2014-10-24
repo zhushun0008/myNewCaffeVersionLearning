@@ -115,4 +115,5 @@ if you are using Ubuntu 12.04 you can try the ***following steps to install CMak
 
 ### Case Study
 #### 1. Fine-tuning CaffeNet for Style Recognition on “Flickr Style” Data
+
     [Visit Finetune Flickr_stype Tutorial] (http://caffe.berkeleyvision.org/gathered/examples/finetune_flickr_style.html)
