@@ -118,4 +118,15 @@ if you are using Ubuntu 12.04 you can try the ***following steps to install CMak
 * Go to [Finetune Flickr_stype Tutorial Page](http://caffe.berkeleyvision.org/gathered/examples/finetune_flickr_style.html) to see:
    * How to define new model to ***reuse the trained weights***
    * How to adapt learning parameters to speed up learning process
-   
+* ***My Command***
+***Note: running all following commands under caffe_root directory ***
+    * Download data
+    ```
+    caffe-master$ python examples/finetune_flickr_style/assemble_data.py --workers=-1 --images=2000 --seed 831486
+    ```
+    When it's done, following messages will show on the screen
+    ```
+    Downloading 2000 images with 7 workers...
+    Writing train/val for 1921(1931 in reference page) successfully downloaded images.
+    
+    ```
