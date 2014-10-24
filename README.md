@@ -119,7 +119,9 @@ if you are using Ubuntu 12.04 you can try the ***following steps to install CMak
    * How to define new model to ***reuse the trained weights***
    * How to adapt learning parameters to speed up learning process
 * ***My Command***
+
 ***Note: running all following commands under caffe_root directory ***
+
 1.Download data
     ```
     caffe-master$ python examples/finetune_flickr_style/assemble_data.py --workers=-1 --images=2000 --seed 831486
