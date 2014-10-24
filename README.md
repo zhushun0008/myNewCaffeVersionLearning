@@ -123,29 +123,32 @@ if you are using Ubuntu 12.04 you can try the ***following steps to install CMak
 ***Note: running all following commands under caffe_root directory***
 
 1.Download data
-    ```
+```
     caffe-master$ python examples/finetune_flickr_style/assemble_data.py --workers=-1 --images=2000 --seed 831486
-    ```
+    
+```
 When it's done, following messages will show on the screen
-    ```
+
+```
     Downloading 2000 images with 7 workers...
     Writing train/val for 1921(1931 in reference page) successfully downloaded images.
     
-    ```
+```
 2.Get trained bvlc net
-    ```
+```
     caffe-master$ ./scripts/download_model_binary.py models/bvlc_reference_caffenet.
     
-    ```
+```
 When it's done, the follow messages will be showed on the screen
 
 3.Train fine-tune net with pre-trained net
-    ```
+
+```
     caffe-master$ ./build/tools/caffe train -solver models/finetune_flickr_style/solver.prototxt -weights models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel -gpu 0
     
-    ```
+```
 When it runs, a lot of information will on the screen
-    ```
+```
     [...]
     
     I0828 22:10:04.025378  9718 solver.cpp:46] Solver scaffolding done.
@@ -167,10 +170,10 @@ When it runs, a lot of information will on the screen
     I0828 22:18:46.171669 11510 solver.cpp:397] Iteration 120, lr = 0.001
     
     [...]
-    ```
+    
+```
 If we are eager to check all the information ,just run the command instead of previous one
-
-    ```
+```
     caffe-master$ ./build/tools/caffe train -solver models/finetune_flickr_style/solver.prototxt -weights models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel -gpu 0 >&./trainFinetuneNetLog.txt
     
-    ```
+```
