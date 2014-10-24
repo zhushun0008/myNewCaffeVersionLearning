@@ -115,8 +115,7 @@ if you are using Ubuntu 12.04 you can try the ***following steps to install CMak
 
 ## Case Study
 ### ***1. Fine-tuning CaffeNet for Style Recognition on “Flickr Style” Data***
-* Reference [Visit Finetune Flickr_stype Tutorial](http://caffe.berkeleyvision.org/gathered/examples/finetune_flickr_style.html) to see
+* Go to [Finetune Flickr_stype Tutorial Page](http://caffe.berkeleyvision.org/gathered/examples/finetune_flickr_style.html) to see:
    * How to define new model to ***reuse the trained weights***
-   * 
    * How to adapt learning parameters to speed up learning process
    
