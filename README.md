@@ -56,6 +56,56 @@ new Version learning
     for req in $(cat python/requirements.txt); do sudo pip install $req; done
 
 ```
+
+#### install cmake 2.8.9
+
+Note that in ***Ubuntu 12.04***, Aptitude will install version ***CMake 2.8.7 by default***, which is ***not supported by Caffe’s CMake build*** (requires at least 2.8.8). As a workaround
+if you are using Ubuntu 12.04 you can try the ***following steps to install CMake 2.8.9***:
+
+```
+    sudo add-apt-repository ppa:ubuntu-sdk-team/ppa -y
+    
+    sudo apt-get -y update
+    
+    sudo apt-get install cmake
+```
+#### Install ***glog***, ***gflags*** and ***lmdb after*** CMake 2.8.9 installed
+1.Download and Install glog before gflags
+```
+    wget https://google-glog.googlecode.com/files/glog-0.3.3.tar.gz
+    
+    tar zxvf glog-0.3.3.tar.gz
+    
+    cd glog-0.3.3
+    
+    ./configure
+    
+    make && make install
+    
+```
+2. Download and Install gflags
+```
+    wget https://github.com/schuhschuh/gflags/archive/master.zip
+    
+    unzip master.zip
+    
+    cd gflags-master
+    
+    mkdir build && cd build
+    
+    export CXXFLAGS="-fPIC" && cmake .. && make VERBOSE=1
+    
+    make && make install
+```
+3. Download and Install lmdb
+```
+    git clone git://gitorious.org/mdb/mdb.git
+    
+    cd mdb/libraries/liblmdb
+    
+    make && make install
+```    
+
 ### Get trained Models
 * run python script
     * dependency
