@@ -130,3 +130,45 @@ When it's done, following messages will show on the screen
     Writing train/val for 1921(1931 in reference page) successfully downloaded images.
     
     ```
+2.Get trained bvlc net
+    ```
+    caffe-master$ ./scripts/download_model_binary.py models/bvlc_reference_caffenet.
+    
+    ```
+When it's done, the follow messages will be showed on the screen
+
+3.Train fine-tune net with pre-trained net
+    ```
+    caffe-master$ ./build/tools/caffe train -solver models/finetune_flickr_style/solver.prototxt -weights models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel -gpu 0
+    
+    ```
+When it runs, a lot of information will on the screen
+    ```
+    [...]
+    
+    I0828 22:10:04.025378  9718 solver.cpp:46] Solver scaffolding done.
+    I0828 22:10:04.025388  9718 caffe.cpp:95] Use GPU with device ID 0
+    I0828 22:10:04.192004  9718 caffe.cpp:107] Finetuning from models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel
+    
+    [...]
+    
+    I0828 22:18:19.700461 11510 solver.cpp:397] Iteration 20, lr = 0.001
+    I0828 22:18:24.924685 11510 solver.cpp:195] Iteration 40, loss = 2.18531
+    I0828 22:18:24.924741 11510 solver.cpp:397] Iteration 40, lr = 0.001
+    I0828 22:18:30.114858 11510 solver.cpp:195] Iteration 60, loss = 2.4915
+    I0828 22:18:30.114910 11510 solver.cpp:397] Iteration 60, lr = 0.001
+    I0828 22:18:35.328071 11510 solver.cpp:195] Iteration 80, loss = 2.04539
+    I0828 22:18:35.328127 11510 solver.cpp:397] Iteration 80, lr = 0.001
+    I0828 22:18:40.588317 11510 solver.cpp:195] Iteration 100, loss = 2.1924
+    I0828 22:18:40.588373 11510 solver.cpp:397] Iteration 100, lr = 0.001
+    I0828 22:18:46.171576 11510 solver.cpp:195] Iteration 120, loss = 2.25107
+    I0828 22:18:46.171669 11510 solver.cpp:397] Iteration 120, lr = 0.001
+    
+    [...]
+    
+    ```
+If we are eager to check all the information ,just run the command instead of previous one
+    ```
+    caffe-master$ ./build/tools/caffe train -solver models/finetune_flickr_style/solver.prototxt -weights models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel -gpu 0 >&./trainFinetuneNetLog.txt
+    
+    ```
