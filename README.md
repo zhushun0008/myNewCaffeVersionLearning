@@ -50,6 +50,12 @@ new Version learning
   </p>
 </blockquote>
 
+### 3. Python Wapper
+* run the following command and be sure you are in the caffe-root directory
+```
+    for req in $(cat python/requirements.txt); do sudo pip install $req; done
+
+```
 ### Get trained Models
 * run python script
     * dependency
