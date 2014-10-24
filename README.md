@@ -120,7 +120,7 @@ if you are using Ubuntu 12.04 you can try the ***following steps to install CMak
    * How to adapt learning parameters to speed up learning process
 * ***My Command***
 
-***Note: running all following commands under caffe_root directory ***
+***Note: running all following commands under caffe_root directory***
 
 1.Download data
     ```
