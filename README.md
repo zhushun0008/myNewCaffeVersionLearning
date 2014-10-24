@@ -111,3 +111,8 @@ if you are using Ubuntu 12.04 you can try the ***following steps to install CMak
     * dependency
     * pip search yaml
     *   sudo pip install yaml
+
+
+### Case Study
+#### 1. Fine-tuning CaffeNet for Style Recognition on “Flickr Style” Data
+[finetune_flickr_stype Tutorial http://caffe.berkeleyvision.org/gathered/examples/finetune_flickr_style.html]
