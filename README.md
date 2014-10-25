@@ -57,7 +57,32 @@ new Version learning
 
 ```
 
-1. 
+1. run following scripts under caffe-master(caffe_root directory)
+```
+    make all 
+    make pycaffe
+    make distribute
+    export PYTHONPATH=/home/zhuzhu/share_zhu/caffe-master/python
+    
+```
+2. Check ***import caffe***
+```
+    open ipython notebook
+    cd **/caffe-master/python (go to the directory of caffe/python)
+    import caffe
+```
+error fixed
+  * Install scikit-image
+```
+
+$ sudo pip install scikit-image  
+    ImportError: You need `six` version 1.3 or later.
+$ sudo pip install six  
+$ sudo pip install -U scikit-image  
+
+```
+
+2. 
 http://blog.csdn.net/u011333059/article/details/38078617
 
 #### install cmake 2.8.9
