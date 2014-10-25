@@ -57,6 +57,9 @@ new Version learning
 
 ```
 
+1. 
+http://blog.csdn.net/u011333059/article/details/38078617
+
 #### install cmake 2.8.9
 
 Note that in ***Ubuntu 12.04***, Aptitude will install version ***CMake 2.8.7 by default***, which is ***not supported by Caffe’s CMake build*** (requires at least 2.8.8). As a workaround
