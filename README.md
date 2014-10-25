@@ -51,11 +51,35 @@ new Version learning
 </blockquote>
 
 ### 3. Python Wapper
-* run the following command and be sure you are in the caffe-root directory
+##### Install dependency packages
 ```
-    for req in $(cat python/requirements.txt); do sudo pip install $req; done
+    $ sudo pip install -r /path/to/caffe-master/python/requirements.txt 
+```
 
-```
+* When errors occur, note the information on the screen to install the necessary packages
+<blockquote>
+[...]
+Downloading/unpacking matplotlib>=1.3.1 (from -r python/requirements.txt (line 6))
+  Downloading matplotlib-1.4.2.tar.gz (50.1Mb): 50.1Mb downloaded
+  Running setup.py egg_info for package matplotlib
+    The required version of distribute (>=0.6.28) is not available,
+    and can't be installed while this script is running. Please
+    install a more recent version first, using
+    'easy_install -U distribute'.
+    
+    (Currently using distribute 0.6.24dev-r0 (/usr/lib/python2.7/dist-packages))
+    Complete output from command python setup.py egg_info:
+    The required version of distribute (>=0.6.28) is not available,
+
+and can't be installed while this script is running. Please
+
+***install a more recent version first***, using
+
+***'easy_install -U distribute'***.
+
+[...]
+
+</blockquote>
 
 1. run following scripts under caffe-master(caffe_root directory)
 ```
