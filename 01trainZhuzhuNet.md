@@ -1,6 +1,6 @@
 Recipe to train zhuzhuNet
 =========================
-#### 1. given all image data, create all 4 files to record images and their labels
+#### [1. given all image data, create all 4 files to record images and their labels](https://github.com/zhushun0008/myNewCaffeVersionLearning/blob/master/02createData.md)
 ```
 1. trainLowImageName.txt
 
