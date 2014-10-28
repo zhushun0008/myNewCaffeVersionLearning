@@ -1,5 +1,7 @@
 Define ZhuZhu Net
 =======================
+#### Check datafiles
+* files need to record pairs of (datasource,label)
 
 Data Layer
 * [Data: Ins and Outs](http://caffe.berkeleyvision.org/tutorial/data.html)
