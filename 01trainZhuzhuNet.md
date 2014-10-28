@@ -12,6 +12,6 @@ Recipe to train zhuzhuNet
 ```
 #### [2. Define zhuzhuNet](https://github.com/zhushun0008/myNewCaffeVersionLearning/blob/master/03defineZhuzhuNet.md)
 
-#### 3. Configure the Solver
+#### [3. Configure the Solver](https://github.com/zhushun0008/myNewCaffeVersionLearning/blob/master/04DefineSolver.md)
 
-#### 4. train/test scripts
+#### [4. train/test scripts]()
