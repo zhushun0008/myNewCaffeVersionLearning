@@ -15,3 +15,7 @@ Recipe to train zhuzhuNet
 #### [3. Configure the Solver](https://github.com/zhushun0008/myNewCaffeVersionLearning/blob/master/04DefineSolver.md)
 
 #### [4. train/test scripts]()
+
+
+#### Error fixed
+change color images to gray images
