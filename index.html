@@ -89,11 +89,9 @@ $ git checkout gh-pages
 <li>Uninstall the current driver and install new driver and cuda-6.5 toolkits</li>
 </ol>
 
-<pre><code>     1. sudo service lightdm stop (stop display)
-
-     2. CRTL + ALT + F1 (Change to command line)
-
-     3. sudo sh cuda-6.5-run
+<pre><code>1. sudo service lightdm stop (stop display)
+2. CRTL + ALT + F1 (Change to command line)
+3. sudo sh cuda-6.5-run
 </code></pre>
 
 <ol>
@@ -161,35 +159,40 @@ new Version learning
 <a name="install-dependency-packages" class="anchor" href="#install-dependency-packages"><span class="octicon octicon-link"></span></a>Install dependency packages</h5>
 
 <blockquote>
-  <p>
-    Cython&gt;=0.19.2
-    
-    numpy&gt;=1.7.1
-    
-    scipy&gt;=0.13.2
-    
-    scikit-image&gt;=0.9.3
-    
-    scikit-learn&gt;=0.14.1
-    
-    ***matplotlib&gt;=1.3.1***
-    
-    ipython&gt;=1.1.0
-    
-    h5py&gt;=2.2.0
-    
-    leveldb&gt;=0.191
-    
-    networkx&gt;=1.8.1
-    
-    nose&gt;=1.3.0
-    
-    pandas&gt;=0.12.0
-    
-    python-dateutil&gt;=1.4,=2.5.0
-    
-    python-gflags&gt;=2.0
- </p>
+<pre><code>Cython&gt;=0.19.2
+</code></pre>
+</blockquote>
+
+<pre><code>numpy&gt;=1.7.1
+
+scipy&gt;=0.13.2
+
+scikit-image&gt;=0.9.3
+
+scikit-learn&gt;=0.14.1
+
+***matplotlib&gt;=1.3.1***
+
+ipython&gt;=1.1.0
+
+h5py&gt;=2.2.0
+
+leveldb&gt;=0.191
+
+networkx&gt;=1.8.1
+
+nose&gt;=1.3.0
+
+pandas&gt;=0.12.0
+
+python-dateutil&gt;=1.4,&lt;2
+
+protobuf&gt;=2.5.0
+
+python-gflags&gt;=2.0
+</code></pre>
+
+<blockquote>
 </blockquote>
 
 <pre><code>    $ sudo pip install -r /path/to/caffe-master/python/requirements.txt 
