@@ -81,6 +81,344 @@ $ git checkout gh-pages
 <h3>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
 
+<h4>
+<a name="1-cuda-65-toolkits" class="anchor" href="#1-cuda-65-toolkits"><span class="octicon octicon-link"></span></a>1. Cuda 6.5 toolkits</h4>
+
+<ol>
+<li>Download cuda-6.5 from NVIDIA</li>
+<li>Uninstall the current driver and install new driver and cuda-6.5 toolkits</li>
+</ol>
+
+<pre><code>     1. sudo service lightdm stop (stop display)
+
+     2. CRTL + ALT + F1 (Change to command line)
+
+     3. sudo sh cuda-6.5-run
+</code></pre>
+
+<ol>
+<li>
+<p>Setup Environment</p>
+
+<pre><code>export PATH=/usr/local/cuda-6.5/bin:$PATH
+
+export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64:$LD_LIBRARY_PATH
+</code></pre>
+</li>
+<li>
+<p>GPU Test</p>
+
+<ul>
+<li>Go to </li>
+</ul>
+
+<pre><code>
+</code></pre>
+</li>
+<li>
+new Version learning
+<blockquote cite="http://developer.mozilla.org">
+<p>This is a quotation taken from the Mozilla Developer Center.</p>
+</blockquote>
+</li>
+</ol>
+
+<h3>
+<a name="2-matlab-wapper" class="anchor" href="#2-matlab-wapper"><span class="octicon octicon-link"></span></a>2. Matlab Wapper</h3>
+
+<h4>
+<a name="1-install-matlab-under-linux" class="anchor" href="#1-install-matlab-under-linux"><span class="octicon octicon-link"></span></a>1. install Matlab under Linux</h4>
+
+<ul>
+<li>download address: <a href="http://xxxx.need.to.add.com">http://xxxx.need.to.add.com</a>
+</li>
+<li>
+<p>Install Process
+</p>
+<blockquote>
+<p></p>
+
+<ol>
+<li><p>run "setup.exe" (or "bin\win32\setup.exe" to install 32-bit Matlab under 64-bit Windows)</p></li>
+<li><p>choose <strong><em>"install manually without using the internet"</em></strong>       </p></li>
+<li><p>set the "file installation key" to be <strong><em>25716-63335-16746-06072</em></strong></p></li>
+<li><p>setup Matlab with required components</p></li>
+<li><p>when asked to activate the product select <strong><em>“Activate manually without internet”</em></strong></p></li>
+<li>
+<p>select "X:\serial\license.lic" when asked for license file (where "X" is drive letter amounted under /mnt/* of my Linux)
+</p>
+</li>
+</ol>
+</blockquote>
+</li>
+
+</ul>
+
+<h3>
+<a name="3-python-wapper" class="anchor" href="#3-python-wapper"><span class="octicon octicon-link"></span></a>3. Python Wapper</h3>
+
+<h5>
+<a name="install-dependency-packages" class="anchor" href="#install-dependency-packages"><span class="octicon octicon-link"></span></a>Install dependency packages</h5>
+
+<blockquote>
+  <p>
+    Cython&gt;=0.19.2
+    
+    numpy&gt;=1.7.1
+    
+    scipy&gt;=0.13.2
+    
+    scikit-image&gt;=0.9.3
+    
+    scikit-learn&gt;=0.14.1
+    
+    ***matplotlib&gt;=1.3.1***
+    
+    ipython&gt;=1.1.0
+    
+    h5py&gt;=2.2.0
+    
+    leveldb&gt;=0.191
+    
+    networkx&gt;=1.8.1
+    
+    nose&gt;=1.3.0
+    
+    pandas&gt;=0.12.0
+    
+    python-dateutil&gt;=1.4,=2.5.0
+    
+    python-gflags&gt;=2.0
+ </p>
+</blockquote>
+
+<pre><code>    $ sudo pip install -r /path/to/caffe-master/python/requirements.txt 
+</code></pre>
+
+<ul>
+<li>
+<p>When errors occur, note the information on the screen to install the necessary packages
+</p>
+<blockquote>
+[...]
+Downloading/unpacking matplotlib&gt;=1.3.1 (from -r python/requirements.txt (line 6))
+Downloading matplotlib-1.4.2.tar.gz (50.1Mb): 50.1Mb downloaded
+Running setup.py egg_info for package matplotlib
+  The required version of distribute (&gt;=0.6.28) is not available,
+  and can't be installed while this script is running. Please
+  install a more recent version first, using
+  'easy_install -U distribute'.
+
+<p>(Currently using distribute 0.6.24dev-r0 (/usr/lib/python2.7/dist-packages))
+  Complete output from command python setup.py egg_info:
+  The required version of distribute (&gt;=0.6.28) is not available,</p>
+</blockquote>
+</li>
+</ul>
+
+<p>and can't be installed while this script is running. Please</p>
+
+<p><strong><em>install a more recent version first</em></strong>, using</p>
+
+<p><strong><em>'easy_install -U distribute'</em></strong>.</p>
+
+<p>[...]</p>
+
+<p></p>
+
+<ol>
+<li>run following scripts under caffe-master(caffe_root directory)</li>
+</ol>
+
+<pre><code>    make all 
+    make pycaffe
+    make distribute
+    export PYTHONPATH=/home/zhuzhu/share_zhu/caffe-master/python
+
+</code></pre>
+
+<ol>
+<li>Check <strong><em>import caffe</em></strong>
+</li>
+</ol>
+
+<pre><code>    open ipython notebook
+    cd **/caffe-master/python (go to the directory of caffe/python)
+    import caffe
+</code></pre>
+
+<p>error fixed</p>
+
+<ul>
+<li>Install scikit-image</li>
+</ul>
+
+<pre><code>
+$ sudo pip install scikit-image  
+    ImportError: You need `six` version 1.3 or later.
+$ sudo pip install six  
+$ sudo pip install -U scikit-image  
+
+</code></pre>
+
+<ol>
+<li>
+<a href="http://blog.csdn.net/u011333059/article/details/38078617">http://blog.csdn.net/u011333059/article/details/38078617</a>
+</li>
+</ol>
+
+<h4>
+<a name="install-cmake-289" class="anchor" href="#install-cmake-289"><span class="octicon octicon-link"></span></a>install cmake 2.8.9</h4>
+
+<p>Note that in <strong><em>Ubuntu 12.04</em></strong>, Aptitude will install version <strong><em>CMake 2.8.7 by default</em></strong>, which is <strong><em>not supported by Caffe’s CMake build</em></strong> (requires at least 2.8.8). As a workaround
+if you are using Ubuntu 12.04 you can try the <strong><em>following steps to install CMake 2.8.9</em></strong>:</p>
+
+<pre><code>    sudo add-apt-repository ppa:ubuntu-sdk-team/ppa -y
+
+    sudo apt-get -y update
+
+    sudo apt-get install cmake
+</code></pre>
+
+<h4>
+<a name="install-glog-gflags-and-lmdb-after-cmake-289-installed" class="anchor" href="#install-glog-gflags-and-lmdb-after-cmake-289-installed"><span class="octicon octicon-link"></span></a>Install <strong><em>glog</em></strong>, <strong><em>gflags</em></strong> and <strong><em>lmdb after</em></strong> CMake 2.8.9 installed</h4>
+
+<p>1.Download and Install glog before gflags</p>
+
+<pre><code>    wget https://google-glog.googlecode.com/files/glog-0.3.3.tar.gz
+
+    tar zxvf glog-0.3.3.tar.gz
+
+    cd glog-0.3.3
+
+    ./configure
+
+    make &amp;&amp; make install
+
+</code></pre>
+
+<ol>
+<li>Download and Install gflags</li>
+</ol>
+
+<pre><code>    wget https://github.com/schuhschuh/gflags/archive/master.zip
+
+    unzip master.zip
+
+    cd gflags-master
+
+    mkdir build &amp;&amp; cd build
+
+    export CXXFLAGS="-fPIC" &amp;&amp; cmake .. &amp;&amp; make VERBOSE=1
+
+    make &amp;&amp; make install
+</code></pre>
+
+<ol>
+<li>Download and Install lmdb</li>
+</ol>
+
+<pre><code>    git clone git://gitorious.org/mdb/mdb.git
+
+    cd mdb/libraries/liblmdb
+
+    make &amp;&amp; make install
+</code></pre>
+
+<h3>
+<a name="get-trained-models" class="anchor" href="#get-trained-models"><span class="octicon octicon-link"></span></a>Get trained Models</h3>
+
+<ul>
+<li>run python script
+
+<ul>
+<li>dependency</li>
+<li>pip search yaml</li>
+<li>  sudo pip install yaml</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a name="case-study" class="anchor" href="#case-study"><span class="octicon octicon-link"></span></a>Case Study</h2>
+
+<h3>
+<a name="1-fine-tuning-caffenet-for-style-recognition-on-flickr-style-data" class="anchor" href="#1-fine-tuning-caffenet-for-style-recognition-on-flickr-style-data"><span class="octicon octicon-link"></span></a><strong><em>1. Fine-tuning CaffeNet for Style Recognition on “Flickr Style” Data</em></strong>
+</h3>
+
+<ul>
+<li>Go to <a href="http://caffe.berkeleyvision.org/gathered/examples/finetune_flickr_style.html">Finetune Flickr_stype Tutorial Page</a> to see:
+
+<ul>
+<li>How to define new model to <strong><em>reuse the trained weights</em></strong>
+</li>
+<li>How to adapt learning parameters to speed up learning process</li>
+</ul>
+</li>
+<li><strong><em>My Command</em></strong></li>
+</ul>
+
+<p><strong><em>Note: running all following commands under caffe_root directory</em></strong></p>
+
+<p>1.Download data</p>
+
+<pre><code>    caffe-master$ python examples/finetune_flickr_style/assemble_data.py --workers=-1 --images=2000 --seed 831486
+
+</code></pre>
+
+<p>When it's done, following messages will show on the screen</p>
+
+<pre><code>    Downloading 2000 images with 7 workers...
+    Writing train/val for 1921(1931 in reference page) successfully downloaded images.
+
+</code></pre>
+
+<p>2.Get trained bvlc net</p>
+
+<pre><code>    caffe-master$ ./scripts/download_model_binary.py models/bvlc_reference_caffenet.
+
+</code></pre>
+
+<p>When it's done, the follow messages will be showed on the screen</p>
+
+<p>3.Train fine-tune net with pre-trained net</p>
+
+<pre><code>    caffe-master$ ./build/tools/caffe train -solver models/finetune_flickr_style/solver.prototxt -weights models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel -gpu 0
+
+</code></pre>
+
+<p>When it runs, a lot of information will on the screen</p>
+
+<pre><code>    [...]
+
+    I0828 22:10:04.025378  9718 solver.cpp:46] Solver scaffolding done.
+    I0828 22:10:04.025388  9718 caffe.cpp:95] Use GPU with device ID 0
+    I0828 22:10:04.192004  9718 caffe.cpp:107] Finetuning from models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel
+
+    [...]
+
+    I0828 22:18:19.700461 11510 solver.cpp:397] Iteration 20, lr = 0.001
+    I0828 22:18:24.924685 11510 solver.cpp:195] Iteration 40, loss = 2.18531
+    I0828 22:18:24.924741 11510 solver.cpp:397] Iteration 40, lr = 0.001
+    I0828 22:18:30.114858 11510 solver.cpp:195] Iteration 60, loss = 2.4915
+    I0828 22:18:30.114910 11510 solver.cpp:397] Iteration 60, lr = 0.001
+    I0828 22:18:35.328071 11510 solver.cpp:195] Iteration 80, loss = 2.04539
+    I0828 22:18:35.328127 11510 solver.cpp:397] Iteration 80, lr = 0.001
+    I0828 22:18:40.588317 11510 solver.cpp:195] Iteration 100, loss = 2.1924
+    I0828 22:18:40.588373 11510 solver.cpp:397] Iteration 100, lr = 0.001
+    I0828 22:18:46.171576 11510 solver.cpp:195] Iteration 120, loss = 2.25107
+    I0828 22:18:46.171669 11510 solver.cpp:397] Iteration 120, lr = 0.001
+
+    [...]
+
+</code></pre>
+
+<p>If we are eager to check all the information ,just run the command instead of previous one</p>
+
+<pre><code>    caffe-master$ ./build/tools/caffe train -solver models/finetune_flickr_style/solver.prototxt -weights models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel -gpu 0 &gt;&amp;./trainFinetuneNetLog.txt
+
+</code></pre>
+
 <h3>
 <a name="tutorials-for-caffe" class="anchor" href="#tutorials-for-caffe"><span class="octicon octicon-link"></span></a>Tutorials For Caffe</h3>
 
