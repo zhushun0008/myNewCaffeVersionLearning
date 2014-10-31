@@ -84,35 +84,30 @@ $ git checkout gh-pages
 <h4>
 <a name="1-cuda-65-toolkits" class="anchor" href="#1-cuda-65-toolkits"><span class="octicon octicon-link"></span></a>1. Cuda 6.5 toolkits</h4>
 
-<ol>
-<li><strong><em>Download cuda-6.5 from NVIDIA</em></strong></li>
-<li><strong><em>Uninstall the current driver and install new driver and cuda-6.5 toolkit</em></strong></li>
-</ol>
+<p><strong><em>1. Download cuda-6.5 from NVIDIA</em></strong>
+<strong><em>2. Uninstall the current driver and install new driver and cuda-6.5 toolkit</em></strong></p>
 
 <pre><code>1. sudo service lightdm stop (stop display)
 2. CRTL + ALT + F1 (Change to command line)
 3. sudo sh cuda-6.5-run
 </code></pre>
 
-<ol>
-<li><strong><em>Setup Environment</em></strong></li>
-</ol>
+<p><strong><em>3. Setup Environment</em></strong></p>
 
 <pre><code>   export PATH=/usr/local/cuda-6.5/bin:$PATH
    export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64:$LD_LIBRARY_PATH
 </code></pre>
 
-<ol>
-<li>
-<p><strong><em>GPU Test</em></strong></p>
+<p><strong><em>4. GPU Test</em></strong></p>
 
 <ul>
-<li>Go to </li>
-</ul>
+<li>
+<p>Go to </p>
 
 <pre><code>
 </code></pre>
-</li>
+
+<ol>
 <li>
 new Version learning
 <blockquote cite="http://developer.mozilla.org">
@@ -120,67 +115,73 @@ new Version learning
 </blockquote>
 </li>
 </ol>
+</li>
+</ul>
 
 <h4>
 <a name="2-matlab-wapper" class="anchor" href="#2-matlab-wapper"><span class="octicon octicon-link"></span></a>2. Matlab Wapper</h4>
 
-<ol>
-<li><strong><em>install Matlab under Linux</em></strong></li>
+<p><strong><em>1. Install Matlab under Linux</em></strong></p>
+
+<ul>
 <li>download address: <a href="http://xxxx.need.to.add.com">http://xxxx.need.to.add.com</a>
 </li>
-<li>Install Process
-&gt;
+<li>Install Process</li>
+</ul>
 
-<ol>
-<li>run "setup.exe" (or "bin\win32\setup.exe" to install 32-bit Matlab under 64-bit Windows)</li>
-<li>choose <strong><em>"install manually without using the internet"</em></strong><br>
-</li>
-<li>set the "file installation key" to be <strong><em>25716-63335-16746-06072</em></strong>
-</li>
-<li>setup Matlab with required components</li>
-<li>when asked to activate the product select <strong><em>“Activate manually without internet”</em></strong>
-</li>
-<li>select "X:\serial\license.lic" when asked for license file (where "X" is drive letter amounted under /mnt/* of my Linux)
-&gt;</li>
-</ol>
-</li>
-</ol>
+<blockquote>
+<pre><code>1. run "setup.exe" (or "bin\win32\setup.exe" to install 32-bit Matlab under 64-bit Windows)
+2. choose ***"install manually without using the internet"***       
+3. set the "file installation key" to be ***25716-63335-16746-06072***
+4. setup Matlab with required components
+5. when asked to activate the product select ***“Activate manually without internet”***
+6. select "X:\serial\license.lic" when asked for license file (where "X" is drive letter amounted under /mnt/* of my Linux)
+</code></pre>
+</blockquote>
 
 <h4>
 <a name="3-python-wapper" class="anchor" href="#3-python-wapper"><span class="octicon octicon-link"></span></a>3. Python Wapper</h4>
 
-<ol>
-<li>
-<strong><em>Install dependency packages</em></strong>
-All the dependency packages are recorded in the 'caffe-master/python/requirements.txt'.
-All the packages could be installed with pip command(Claim from Webs)</li>
-</ol>
+<p><strong><em>1. Install dependency packages</em></strong></p>
+
+<ul>
+<li>All the dependency packages are recorded in the 'caffe-master/python/requirements.txt'.</li>
+<li>All the packages could be installed with pip command(Claim from Webs)
+
+<ul>
+<li>Reference to <a href="">Pip Claim</a>
+</li>
+</ul>
+</li>
+<li>Use following command to install the necessary packages</li>
+</ul>
 
 <pre><code>myUbuntu$ sudo pip install -r /path/to/caffe-master/python/requirements.txt 
 </code></pre>
 
+<ul>
+<li>
+<p>These Packages are:</p>
+
 <blockquote>
-<pre><code>Cython&gt;=0.19.2
+<p>Cython&gt;=0.19.2
 numpy&gt;=1.7.1
 scipy&gt;=0.13.2
 scikit-image&gt;=0.9.
 scikit-learn&gt;=0.14.1 (Python for Machine Learning)
-***matplotlib&gt;=1.3.1***
+<strong><em>matplotlib&gt;=1.3.1</em></strong>
 ipython&gt;=1.1.0
 h5py&gt;=2.2.0
 leveldb&gt;=0.191
 networkx&gt;=1.8.1
 nose&gt;=1.3.0
 pandas&gt;=0.12.0 (Good for Time Series Analysis)
-python-dateutil&gt;=1.4,&lt;2
-protobuf&gt;=2.5.0
-python-gflags&gt;=2.0
-</code></pre>
+python-dateutil&gt;=1.4,=2.5.0
+python-gflags&gt;=2.0</p>
 </blockquote>
-
-<ul>
+</li>
 <li>
-<p>When errors occur, note the information on the screen to install the necessary packages
+<p>When errors occur, take attention to the information on the screen. Most of time it will tell you how to install the necessary packages or important things such as dependency.
 </p>
 <blockquote>
 [...]
@@ -302,14 +303,20 @@ if you are using Ubuntu 12.04 you can try the <strong><em>following steps to ins
 </ol>
 
 <pre><code>    git clone git://gitorious.org/mdb/mdb.git
-
     cd mdb/libraries/liblmdb
-
     make &amp;&amp; make install
+
 </code></pre>
 
 <h3>
-<a name="get-trained-models" class="anchor" href="#get-trained-models"><span class="octicon octicon-link"></span></a>Get trained Models</h3>
+<a name="examples-from-caffe-website" class="anchor" href="#examples-from-caffe-website"><span class="octicon octicon-link"></span></a>Examples From Caffe Website</h3>
+
+<h5>
+<a name="go-to-example-section-from-caffe-web" class="anchor" href="#go-to-example-section-from-caffe-web"><span class="octicon octicon-link"></span></a>Go to <a href="http://caffe.berkeleyvision.org/">Example Section from Caffe Web</a>
+</h5>
+
+<h4>
+<a name="get-trained-models" class="anchor" href="#get-trained-models"><span class="octicon octicon-link"></span></a>Get trained Models</h4>
 
 <ul>
 <li>run python script
@@ -401,14 +408,6 @@ if you are using Ubuntu 12.04 you can try the <strong><em>following steps to ins
 <pre><code>    caffe-master$ ./build/tools/caffe train -solver models/finetune_flickr_style/solver.prototxt -weights models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel -gpu 0 &gt;&amp;./trainFinetuneNetLog.txt
 
 </code></pre>
-
-<h3>
-<a name="tutorials-for-caffe" class="anchor" href="#tutorials-for-caffe"><span class="octicon octicon-link"></span></a>Tutorials For Caffe</h3>
-
-<p>Reference to <a href="http://caffe.berkeleyvision.org/tutorial/">Tutorials</a> </p>
-
-<h3>
-<a name="examples-from-caffe-website" class="anchor" href="#examples-from-caffe-website"><span class="octicon octicon-link"></span></a>Examples From Caffe Website</h3>
 
 <h3>
 <a name="reference" class="anchor" href="#reference"><span class="octicon octicon-link"></span></a>Reference</h3>
