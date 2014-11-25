@@ -17,7 +17,7 @@ Configure the Solver for zhuzhuNet
 5. max_iter: 350000 
    * max_iter: 350000 (train for 350K iterations total)
 6. momentum
-  * $$V_(t+1) = μ * V_t − α * ∇L(Wt_t )$$
+  * $ V_(t+1) = μ * V_t − α * ∇L(Wt_t ) $
 7. 
 Wt+1=Wt+Vt+1
 ### 1. Solver Type
