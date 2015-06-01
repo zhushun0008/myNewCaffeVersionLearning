@@ -7,3 +7,4 @@
 * [PyCharm中的那些实用功能 之后补读](http://blog.jobbole.com/51498/)
 
 * [LMDB in Python](https://lmdb.readthedocs.org/en/release/#iterators) 
+* [Creating an caffe_LMDB database in Python](http://deepdish.io/)
