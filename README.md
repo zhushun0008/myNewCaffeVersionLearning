@@ -183,10 +183,11 @@ Caffe has several dependencies.
         sudo make install
     ```
     
+    6. Install IO libraries
     ```
         sudo pip install leveldb
         sudo pip install lmdb
-
+        sudo apt-get install libhdf5-serial-dev
         sudo apt-get install snappy
         sudo apt-get install hdf5-tools
     ```
