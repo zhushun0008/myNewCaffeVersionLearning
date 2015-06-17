@@ -51,7 +51,13 @@ new Version learning
 </blockquote>
 
 ### 3. Python Wapper
-##### Install dependency packages
+##### 3.1 Install pip
+
+```
+    sudo apt-get install python-pip
+```
+
+##### 3.2 Install dependency packages
 <blockquote>
   <p>
     Cython>=0.19.2
