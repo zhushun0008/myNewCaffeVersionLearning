@@ -99,6 +99,30 @@ new Version learning
 ```
 
 * When errors occur, note the information on the screen to install the necessary packages
+* 1. ImportError: No module named numpy.distutils.core
+    * Fix using following command from [run pip install numpy==1.6.2 before installing requirements.txt](https://github.com/edx/discern/issues/18)
+```
+    sudo pip install numpy
+```
+* 2. ImportError: No module named numpy.distutils.core
+    * Fix using following command from [scipy official Site](http://www.scipy.org/install.html) 
+```
+        sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose
+
+```
+3. The required version of distribute (>=0.6.28) is not available
+    * Fix using following command from [](https://pypi.python.org/pypi/setuptools)
+```
+    # Note that you will may need to invoke the command with superuser privileges to install to the system Python:
+
+    wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
+
+```
+4. The following required packages can not be built:
+
+                        * freetype
+    * Fix using following command from [install freetype](http://stackoverflow.com/questions/20533426/ubuntu-running-pip-install-gives-error-the-following-required-packages-can-no)
+
 <blockquote>
 [...]
 Downloading/unpacking matplotlib>=1.3.1 (from -r python/requirements.txt (line 6))
