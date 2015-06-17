@@ -192,7 +192,11 @@ Caffe has several dependencies.
     6. Install IO libraries
     ```
         sudo apt-get install libleveldb-dev
-        sudo pip install lmdb
+        # sudo pip install lmdb
+        # Install liblmdb-dev
+        [Download liblmdb-dev](https://launchpad.net/ubuntu/+source/lmdb/0.9.14-1/+build/6496363)
+        [Its dependency - liblmdb0](https://launchpad.net/ubuntu/vivid/amd64/liblmdb0)
+        
         sudo apt-get install libhdf5-serial-dev
         sudo apt-get install snappy
         sudo apt-get install hdf5-tools
