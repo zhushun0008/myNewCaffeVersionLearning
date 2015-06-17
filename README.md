@@ -55,6 +55,7 @@ new Version learning
 
 ```
     sudo apt-get install python-pip
+    sudo apt-get install python-dev | python-devel
 ```
 
 ##### 3.2 Install dependency packages
