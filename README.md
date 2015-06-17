@@ -241,7 +241,11 @@ and can't be installed while this script is running. Please
 sudo apt-get install libprotobuf-dev
 
 ```
+libcudart.so.6.0: cannot open shared object file: No such file or directory when run make runtest
 
+```
+    export LD_LIBRARY_PATH=:/usr/local/cuda/lib64
+```
 
 2. Check ***import caffe***
 ```
