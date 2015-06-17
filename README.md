@@ -135,6 +135,12 @@ Caffe has several dependencies.
     OpenCV >= 2.4 including 3.0
     protobuf, glog, gflags
     IO libraries hdf5, leveldb, snappy, lmdb
+
+    Use Following Command    
+    ```
+        sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev libhdf5-serial-dev
+        
+    ```
     
     1. install OpenBLAS
         * [OpenBLAS Installation](https://github.com/xianyi/OpenBLAS/wiki/Installation-Guide)
