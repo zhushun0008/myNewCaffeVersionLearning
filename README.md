@@ -150,6 +150,14 @@ Caffe has several dependencies.
     ```
     
     Install ***glog***, ***gflags*** and ***lmdb after*** CMake 2.8.9 installed    
+    3. Install required Version for Cmake
+    downloading from [Cmake](http://www.cmake.org/download/)
+    
+    ```
+        ./bootstrap
+        make      
+        make install
+    ```
     3. Download and Install glog before gflags
 
     ```
