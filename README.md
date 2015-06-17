@@ -151,24 +151,27 @@ Caffe has several dependencies.
     
     Install ***glog***, ***gflags*** and ***lmdb after*** CMake 2.8.9 installed    
     3. Install required Version for Cmake
-    downloading from [Cmake](http://www.cmake.org/download/)
-    
+
+    Note that in ***Ubuntu 12.04***, Aptitude will install version ***CMake 2.8.7 by default***, which is ***not supported by Caffe’s CMake build*** (requires at least 2.8.12). As a workaround
+
+    [Install Cmake](http://www.cmake.org/install/)
     ```
         ./bootstrap
         make      
         make install
     ```
-    3. Download and Install glog before gflags
+    4. Download and Install glog before gflags
 
     ```
-    wget https://google-glog.googlecode.com/files/glog-0.3.3.tar.gz
-    tar zxvf glog-0.3.3.tar.gz
-    cd glog-0.3.3
-    ./configure
-    make && make install
+        wget https://google-glog.googlecode.com/files/glog-0.3.3.tar.gz
+        tar zxvf glog-0.3.3.tar.gz
+        cd glog-0.3.3
+        ./configure
+        sudo make
+        sudo make install
     ```
 
-    4. Download and Install gflags
+    5. Download and Install gflags
     
     ```
         wget https://github.com/schuhschuh/gflags/archive/master.zip
@@ -176,7 +179,8 @@ Caffe has several dependencies.
         cd gflags-master
         mkdir build && cd build
         export CXXFLAGS="-fPIC" && cmake .. && make VERBOSE=1
-        make && make install
+        sudo make
+        sudo make install
     ```
     
     ```
@@ -248,17 +252,7 @@ $ sudo pip install -U scikit-image
 2. 
 http://blog.csdn.net/u011333059/article/details/38078617
 
-#### install cmake 2.8.9
 
-Note that in ***Ubuntu 12.04***, Aptitude will install version ***CMake 2.8.7 by default***, which is ***not supported by Caffe’s CMake build*** (requires at least 2.8.8). As a workaround
-if you are using Ubuntu 12.04 you can try the ***following steps to install CMake 2.8.9***:
-
-```
-    sudo add-apt-repository ppa:ubuntu-sdk-team/ppa -y
-    
-    sudo apt-get -y update
-    
-    sudo apt-get install cmake
 ```
 
 3. Download and Install lmdb
