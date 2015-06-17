@@ -149,13 +149,35 @@ Caffe has several dependencies.
         sudo apt-get install aptitude
     ```
     
-```
-sudo pip install leveldb
-sudo pip install lmdb
+    Install ***glog***, ***gflags*** and ***lmdb after*** CMake 2.8.9 installed    
+    3. Download and Install glog before gflags
 
-sudo apt-get install snappy
-sudo apt-get install hdf5-tools
-```
+    ```
+    wget https://google-glog.googlecode.com/files/glog-0.3.3.tar.gz
+    tar zxvf glog-0.3.3.tar.gz
+    cd glog-0.3.3
+    ./configure
+    make && make install
+    ```
+
+    4. Download and Install gflags
+    
+    ```
+        wget https://github.com/schuhschuh/gflags/archive/master.zip
+        unzip master.zip
+        cd gflags-master
+        mkdir build && cd build
+        export CXXFLAGS="-fPIC" && cmake .. && make VERBOSE=1
+        make && make install
+    ```
+    
+    ```
+        sudo pip install leveldb
+        sudo pip install lmdb
+
+        sudo apt-get install snappy
+        sudo apt-get install hdf5-tools
+    ```
     
 
 <blockquote>
@@ -230,34 +252,7 @@ if you are using Ubuntu 12.04 you can try the ***following steps to install CMak
     
     sudo apt-get install cmake
 ```
-#### Install ***glog***, ***gflags*** and ***lmdb after*** CMake 2.8.9 installed
-1.Download and Install glog before gflags
-```
-    wget https://google-glog.googlecode.com/files/glog-0.3.3.tar.gz
-    
-    tar zxvf glog-0.3.3.tar.gz
-    
-    cd glog-0.3.3
-    
-    ./configure
-    
-    make && make install
-    
-```
-2. Download and Install gflags
-```
-    wget https://github.com/schuhschuh/gflags/archive/master.zip
-    
-    unzip master.zip
-    
-    cd gflags-master
-    
-    mkdir build && cd build
-    
-    export CXXFLAGS="-fPIC" && cmake .. && make VERBOSE=1
-    
-    make && make install
-```
+
 3. Download and Install lmdb
 ```
     git clone git://gitorious.org/mdb/mdb.git
