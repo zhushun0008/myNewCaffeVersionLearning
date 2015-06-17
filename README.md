@@ -122,6 +122,41 @@ new Version learning
 
                         * freetype
     * Fix using following command from [install freetype](http://stackoverflow.com/questions/20533426/ubuntu-running-pip-install-gives-error-the-following-required-packages-can-no)
+    
+5. Prerequisites
+
+Caffe has several dependencies.
+
+    CUDA is required for GPU mode.
+        library version 7.0 and the latest driver version are recommended, but 6.* is fine too
+        5.5, and 5.0 are compatible but considered legacy
+    BLAS via ATLAS, MKL, or OpenBLAS.
+    Boost >= 1.55
+    OpenCV >= 2.4 including 3.0
+    protobuf, glog, gflags
+    IO libraries hdf5, leveldb, snappy, lmdb
+    
+    1. install OpenBLAS
+        * [OpenBLAS Installation](https://github.com/xianyi/OpenBLAS/wiki/Installation-Guide)
+    or
+        * sudo apt-get install libopenblas-dev
+        
+    2. Install Boost
+            [how-to-install-boost-on-ubuntu](http://stackoverflow.com/questions/12578499/how-to-install-boost-on-ubuntu)
+
+    ```
+        sudo apt-get install libboost-all-dev+
+        sudo apt-get install aptitude
+    ```
+    
+```
+sudo pip install leveldb
+sudo pip install lmdb
+
+sudo apt-get install snappy
+sudo apt-get install hdf5-tools
+```
+    
 
 <blockquote>
 [...]
@@ -155,6 +190,14 @@ and can't be installed while this script is running. Please
     export PYTHONPATH=/home/zhuzhu/share_zhu/caffe-master/python
     
 ```
+   1 google/protobuf/stubs/common.h: No such file or directory
+   fixed from [install libprotobuf-dev](https://github.com/BVLC/caffe/issues/19)
+```
+sudo apt-get install libprotobuf-dev
+
+```
+
+
 2. Check ***import caffe***
 ```
     open ipython notebook
